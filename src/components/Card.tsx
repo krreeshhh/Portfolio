@@ -40,7 +40,7 @@ const Card = ({ project }: { project: Project }) => {
           {<Tags items={project.tags} />}
         </div>
         {project.link && (
-          <Link href={project.link} target={'_blank'} className='rounded-lg border border-gray-200 dark:border-neutral-800 px-3 py-2 text-sm transition-colors duration-200 hover:bg-white dark:hover:bg-white hover:text-black dark:hover:text-black text-neutral-700 dark:text-neutral-300 flex items-center gap-1'>
+          <Link href={project.link} target={'_blank'} className='rounded-lg border border-gray-200 dark:border-neutral-800 px-3 py-2 text-sm transition-colors duration-200 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black text-neutral-700 dark:text-neutral-300 flex items-center gap-1'>
             <IconExternalLink size={16} />
             Live
           </Link>

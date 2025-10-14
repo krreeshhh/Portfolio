@@ -163,7 +163,7 @@ function Projects() {
         }
       </div>
       <Link href={'https://github.com/Tokittoo'} target='_blank'>
-        <button className='flex items-center gap-1 text-sm mx-auto my-8 px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-200 cursor-pointer'>
+        <button className='flex items-center gap-1 text-sm mx-auto my-8 px-3 py-2 rounded-lg hover:bg-black hover:text-white dark:hover:bg-neutral-900 transition-colors duration-200 cursor-pointer'>
           See More <IconChevronDown size={16} />
         </button>
       </Link>
