@@ -64,7 +64,7 @@ const projects: Project[] = [
   {
     title: 'Sibhi v1.0',
     description: "Personal cybersecurity portfolio showcasing write-ups, skills, experience, and professional insights.",
-    link: 'https://xibhi.github.io',
+    link: 'https://xibhi.netlify.app/',
     tags:[
       Html,
       CSS,
@@ -74,7 +74,7 @@ const projects: Project[] = [
   {
     title: 'Sibhi v2.0',
     description: "Redesigned professional cybersecurity portfolio with structured write-ups, skills, experience, and achievements.",
-    link: 'https://xibhi.vercel.app',
+    link: 'https://xibhi.vercel.app/',
     tags:[
       React,
       TypeScript,
@@ -85,7 +85,7 @@ const projects: Project[] = [
   {
     title: 'Penquin',
     description: "Collaborative security tooling initiative with Sibhi delivering a modular toolkit for advanced vulnerability discovery.",
-    link:'https://penquin.vercel.app',
+    link:'https://penquin.vercel.app/',
     tags: [
       NextJS,
       NodeJS,
@@ -97,7 +97,7 @@ const projects: Project[] = [
   {
     title: 'SECURE WORLDZ',
     description: "A platform for security professionals to share their knowledge and experiences with the community.",
-    link:'https://secure-worldz.vercel.app',
+    link:'https://secure-worldz.vercel.app/',
     tags: [
       NextJS,
       TypeScript,
