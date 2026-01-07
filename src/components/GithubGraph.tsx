@@ -1,0 +1,56 @@
+import { Suspense } from 'react'
+import { GithubGraphClient } from './GithubGraphClient'
+import { AnimationWrapper } from './ui/animation-wrapper'
+
+type ContributionDay = {
+  date: string;
+  count: number;
+  level: number;
+};
+
+const getLevel = (count: number): number => {
+  if (count === 0) return 0;
+  if (count < 5) return 1;
+  if (count < 10) return 2;
+  if (count < 20) return 3;
+  return 4;
+};
+
+async function getGithubContributions() {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contributions`, {
+      next: { revalidate: 3600 }, // Cache for 1 hour
+    })
+
+    if (!res.ok) return null
+
+    const json: { date: string; count: number }[] = await res.json()
+
+    const formatted: ContributionDay[] = json.map((day) => ({
+      date: day.date,
+      count: day.count,
+      level: getLevel(day.count),
+    }))
+
+    return formatted
+  } catch (err) {
+    console.error('Failed to load contributions:', err)
+    return null
+  }
+}
+
+async function GithubGraphContent() {
+  const data = await getGithubContributions()
+
+  return <GithubGraphClient data={data} />
+}
+
+export default function GithubGraph() {
+  return (
+    <Suspense fallback={<div />}>
+      <AnimationWrapper className='px-4 md:px-8 pt-1 pb-8' id='github'>
+        <GithubGraphContent />
+      </AnimationWrapper>
+    </Suspense>
+  )
+}
