@@ -19,7 +19,7 @@ const getLevel = (count: number): number => {
 async function getGithubContributions() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contributions`, {
-      next: { revalidate: 3600 }, // Cache for 1 hour
+      next: { revalidate: 0 }, // Cache disabled for immediate update
     })
 
     if (!res.ok) return null
