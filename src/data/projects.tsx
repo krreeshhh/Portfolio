@@ -89,12 +89,13 @@ export const projects: Project[] = [
     content: (
       <>
         <p>
-          Sibhi v1.0 is a personal cybersecurity portfolio showcasing professional achievements and security expertise.
+          Legacy portfolio showcasing early career milestones and foundational security work.
         </p>
         <ul>
-          <li>• Hall of Fame recognitions from NASA, Cisco, Lenovo, United Airlines, OYO, and Citi</li>
-          <li>• Comprehensive security writeups and professional insights from real-world engagements</li>
-          <li>• Built with clean HTML, CSS, and JavaScript for accessible presentation</li>
+          <li>• Showcasing Hall of Fame recognitions from top tech companies</li>
+          <li>• Documenting early security research and vulnerability findings</li>
+          <li>• Clean, performance-focused design with HTML, CSS, JavaScript</li>
+          <li>• A foundational archive of professional growth and insights</li>
         </ul>
       </>
     ),
@@ -113,12 +114,13 @@ export const projects: Project[] = [
     content: (
       <>
         <p>
-          Sibhi v2.0 is a redesigned professional cybersecurity portfolio built with modern web technologies.
+          Modern, interactive portfolio highlighting advanced security research and detailed write-ups.
         </p>
         <ul>
-          <li>• Features CVE-2025-26206 discovery with detailed writeups published on Medium</li>
-          <li>• Integrated Spotify widget displaying currently playing music and comprehensive project showcases</li>
-          <li>• Built with modern React, TypeScript, and Next.js for enhanced user experience</li>
+          <li>• Features major discoveries including CVE-2025-26206</li>
+          <li>• Interactive ecosystem with Spotify integration and dynamic content</li>
+          <li>• Built with Next.js and TypeScript for optimal performance</li>
+          <li>• Comprehensive showcase of skills, certifications, and achievements</li>
         </ul>
       </>
     ),
@@ -148,7 +150,7 @@ export const projects: Project[] = [
         </ul>
       </>
     ),
-    demoLink: 'https://res.cloudinary.com/sputifyy/video/upload/v1766151214/vynk-demo_xdpfa3.mp4',
+    demoLink: 'https://res.cloudinary.com/dqsz8xitb/video/upload/v1766556638/Penquin_bgqgwy.mp4',
     tags: [
       React,
       NextJS,
@@ -159,44 +161,19 @@ export const projects: Project[] = [
     ]
   },
   {
-    title: 'SECURE WORLDZ',
-    description: "A platform for security professionals to share their knowledge and experiences with the community.",
-    liveLink: 'https://secureworldz.vercel.app',
-
-    content: (
-      <>
-        <p>
-          SECURE WORLDZ is a comprehensive technology services platform built on "Secure. Build. Evolve."
-        </p>
-        <ul>
-          <li>• Three core divisions: Cybersecurity Services, Website Development, and AI Development</li>
-          <li>• Assess → Protect → Detect & Respond methodology achieving 40% reduction in vulnerabilities</li>
-          <li>• Tiered pricing plans (Silver, Gold, Platinum) with transparent pricing and measurable outcomes</li>
-        </ul>
-      </>
-    ),
-    image: '/Projects/Secure-Worldz.webp',
-    tags: [
-      React,
-      NextJS,
-      TypeScript,
-      Tailwind,
-
-    ]
-  },
-  {
     title: 'Drago',
-    description: "Drago is a cybersecurity-focused site offering a growing library of tools and project checklists to help users secure their digital assets.",
+    description: "A marketplace for real tech products created by practitioners and engineers who work with technology every day.",
     liveLink: 'https://dragotool.shop',
     content: (
       <>
         <p>
-          Drago Tools is a specialized marketplace for advanced technology products created by practitioners.
+          Specialized marketplace delivering battle-tested tools for security practitioners.
         </p>
         <ul>
-          <li>• Curated library of battle-tested cybersecurity tools and project checklists</li>
-          <li>• Solves actual problems faced by security professionals and developers</li>
-          <li>• Each tool developed with practical experience ensuring real-world effectiveness</li>
+          <li>• Curated library of essential cybersecurity tools and checklists</li>
+          <li>• Solves real-world security challenges for developers and pros</li>
+          <li>• Streamlined marketplace experience for digital security assets</li>
+          <li>• Built for reliability and practical, everyday security use</li>
         </ul>
       </>
     ),
@@ -216,12 +193,13 @@ export const projects: Project[] = [
     content: (
       <>
         <p>
-          Wattrack is an enterprise-grade secure access portal for authorized personnel monitoring.
+          Enterprise secure access portal for real-time system monitoring and compliance.
         </p>
         <ul>
-          <li>• Enterprise-grade authentication with comprehensive logging for security and compliance</li>
-          <li>• Monitoring dashboard for system metrics, activity logs, and real-time data visualization</li>
-          <li>• Strict access controls with full audit trails ensuring complete traceability</li>
+          <li>• Robust authentication ensuring authorized-only system access</li>
+          <li>• Real-time dashboard for critical data and activity tracking</li>
+          <li>• Comprehensive logging for full security and compliance audits</li>
+          <li>• Scalable architecture designed for enterprise monitoring needs</li>
         </ul>
       </>
     ),
