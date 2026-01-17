@@ -12,7 +12,7 @@ const CTA = () => {
         <IconButton href={'mailto:KrishnaPrasath.7x@gmail.com'} ariaLabel={'Email'}>
           <IconMail className='h-5 w-5' />
         </IconButton>
-        <IconButton href={'https://tokitokrishna.t.me/'} ariaLabel={'Telegram'}>
+        <IconButton href={'https://krreeshhh.t.me/'} ariaLabel={'Telegram'}>
           <IconBrandTelegram className='h-5 w-5' />
         </IconButton>
         <IconButton href={'https://www.linkedin.com/in/krishnaprasath-r/'} ariaLabel={'LinkedIn'}>
@@ -21,7 +21,7 @@ const CTA = () => {
         <IconButton href={'https://peerlist.io/krishnaprasath'} ariaLabel={'Peerlist'}>
           <SiPeerlist className='h-5 w-5' />
         </IconButton>
-        <IconButton href={'https://github.com/Tokittoo'} ariaLabel={'GitHub'}>
+        <IconButton href={'https://github.com/krreeshhh'} ariaLabel={'GitHub'}>
           <IconBrandGithub className='h-5 w-5' />
         </IconButton>
         <IconButton href={'https://www.instagram.com/krreeshhh/'} ariaLabel={'Instagram'}>

@@ -23,7 +23,7 @@ const heroButtons: IHeroButton[] = [
   },
   {
     text: 'github',
-    href: 'https://github.com/xibhi',
+    href: 'https://github.com/krreeshhh',
     icon: FaGithub
   }
 ]
