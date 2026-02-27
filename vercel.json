@@ -1,0 +1,34 @@
+{
+    "redirects": [
+        {
+            "source": "/linux",
+            "destination": "/install.sh",
+            "permanent": true
+        },
+        {
+            "source": "/hyprland",
+            "destination": "/hyprland.sh",
+            "permanent": true
+        }
+    ],
+    "headers": [
+        {
+            "source": "/install.sh",
+            "headers": [
+                {
+                    "key": "Content-Disposition",
+                    "value": "attachment; filename=\"install.sh\""
+                }
+            ]
+        },
+        {
+            "source": "/hyprland.sh",
+            "headers": [
+                {
+                    "key": "Content-Disposition",
+                    "value": "attachment; filename=\"hyprland.sh\""
+                }
+            ]
+        }
+    ]
+}

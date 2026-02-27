@@ -1,0 +1,30 @@
+/* Add this to your style.css file */
+
+.projects {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+}
+
+.projects:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: For dark mode, you might want a different border color */
+@media (prefers-color-scheme: dark) {
+  .projects:hover {
+    border-color: #ffffff;
+    border-radius: 0.5rem;
+  }
+}
+
+/* Optional: For light mode, you might want a different border color */
+@media (prefers-color-scheme: light) {
+  .projects:hover {
+    border-color: #000000;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+}
