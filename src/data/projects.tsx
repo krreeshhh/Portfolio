@@ -229,7 +229,7 @@ export const projects: Project[] = [
         </ul>
       </>
     ),
-    image: '/Projects/Wattrack.webp',
+    image: '/Projects/pigos.webp',
     tags: [
       React,
       NextJS,
