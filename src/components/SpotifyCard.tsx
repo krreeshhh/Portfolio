@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { Suspense } from 'react'
 import { headers } from 'next/headers'
 import { IconLoader2 } from '@tabler/icons-react'

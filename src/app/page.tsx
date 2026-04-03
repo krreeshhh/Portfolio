@@ -1,5 +1,8 @@
 import React from 'react'
 import type { Metadata } from 'next'
+
+export const dynamic = 'force-dynamic'
+
 import SpotifyCard from '@/components/SpotifyCard'
 import CTA from '@/components/CTA'
 import GithubGraph from '@/components/GithubGraph'
