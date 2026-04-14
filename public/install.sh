@@ -27,6 +27,7 @@ PACKAGES=(
     "upscayl-bin"
     "opencode-bin"
     "obs-studio-git"
+    "antigravity-manager-bin"
 )
 
 echo "Installing packages with yay..."
