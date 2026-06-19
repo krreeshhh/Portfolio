@@ -42,7 +42,7 @@ function Skills() {
           <motion.div
             key={skill.name}
             variants={childVariant}
-            className='group flex items-center gap-2 px-3 py-2 rounded-lg border border-transparent hover:border-neutral-300 hover:bg-neutral-100 hover:text-neutral-900 dark:hover:border-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-white transition-colors duration-200'
+            className='group flex items-center gap-2 px-3 py-2 rounded-lg border border-transparent hover:border-neutral-300 hover:bg-neutral-300 hover:text-neutral-900 dark:hover:border-neutral-700 dark:hover:bg-neutral-800 dark:hover:text-white transition-colors duration-200'
           >
             <span className='text-neutral-600 transition-colors duration-200 group-hover:text-black dark:group-hover:text-white dark:text-neutral-300'>
               {skill.logo ?? null}

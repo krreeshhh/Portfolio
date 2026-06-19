@@ -30,8 +30,8 @@ const heroButtons: IHeroButton[] = [
 
 const Intro = () => {
   return (
-    <AnimationWrapper className='px-4 md:px-8 my-4'>
-      <div className='flex flex-col md:flex-row justify-between gap-4'>
+    <AnimationWrapper className='px-4 md:px-8 my-4 scroll-mt-35' id='home'>
+      <div className='flex flex-col md:flex-row justify-between gap-4 '>
         <div className='flex gap-3 md:gap-4'>
           <motion.div
             variants={childVariant}

@@ -8,7 +8,7 @@ import { IconMenu2, IconX } from '@tabler/icons-react';
 const items = [
   {
     name: 'Home',
-    link: '/',
+    link: '/#home',
   },
   {
     name: 'Projects',

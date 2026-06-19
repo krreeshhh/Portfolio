@@ -62,7 +62,7 @@ function Projects() {
       initial={'hidden'}
       animate={'show'}
       variants={parentVariant}
-      className='px-4 md:px-8 my-4 pb-8' id='projects'
+      className='px-4 md:px-8 my-4 pb-8 scroll-mt-30' id='projects'
     >
       <AnimatePresence>
         {current && (
