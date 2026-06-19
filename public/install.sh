@@ -14,19 +14,20 @@ sudo pacman -Syy
 
 # 2. Install Native/AUR Packages using yay
 PACKAGES=(
-    "helium-browser-bin"
-    "materialgram-bin"
-    "visual-studio-code-bin"
-    "spotify"
+    "brave-bin"
+    "fagram-bin"
+    "antigravity"
     "ab-download-manager-bin" # Corresponds to AB Download Manager
     "localsend-bin"
     "nodejs"
     "npm"
     "flatpak"
-    "zapzap"
     "equibop-bin"
     "bun"
     "upscayl-bin"
+    "opencode-bin"
+    "obs-studio-git"
+    "antigravity-manager-bin"
 )
 
 echo "Installing packages with yay..."
@@ -41,5 +42,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 echo "Installing Flatpak applications..."
 flatpak install -y flathub io.github.diegopvlk.Cine
 flatpak install -y flathub io.github.flattool.Warehouse
+flatpak install -y flathub com.jeffser.Nocturne
+
 
 echo "All applications installed successfully!"
