@@ -37,7 +37,7 @@ const TextAnimation = () => {
             exit={{ opacity: 0, y: -5, filter: "blur(5px)" }}
             transition={{ delay: i * 0.03, duration: 0.3 }}
           >
-            {char}
+            {char === " " ? "\u00A0" : char}
           </motion.span>
         ))}
       </motion.span>

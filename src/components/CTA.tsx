@@ -9,7 +9,7 @@ const CTA = () => {
       <h1 className='text-3xl font-sans font-bold tracking-tight my-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-600 dark:from-neutral-700 dark:to-white'>Let&apos;s build something that doesn&apos;t end up in the GitHub graveyard.</h1>
       <p className='text-zinc-700 dark:text-zinc-400 my-1'>Freelance, full-time, or just vibing with an idea—I&apos;m all ears.</p>
       <div className='flex justify-center flex-wrap gap-2 py-2 my-2'>
-        <IconButton href={'mailto:KrishnaPrasath.7x@gmail.com'} ariaLabel={'Email'}>
+        <IconButton href={'mailto:krishnaprasath.7x@gmail.com'} ariaLabel={'Email'}>
           <IconMail className='h-5 w-5' />
         </IconButton>
         <IconButton href={'https://krreeshhh.t.me/'} ariaLabel={'Telegram'}>
