@@ -13,6 +13,7 @@ interface GithubGraphClientProps {
 
 export function GithubGraphClient({ data }: GithubGraphClientProps) {
   const { resolvedTheme } = useTheme()
+  const colorScheme = resolvedTheme === 'light' ? 'light' : 'dark'
 
   return (
     <div className='flex flex-col font-sans'>
@@ -47,10 +48,10 @@ export function GithubGraphClient({ data }: GithubGraphClientProps) {
               blockSize={9.5}
               blockMargin={2}
               fontSize={12}
-              colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
+              colorScheme={colorScheme}
               theme={{
-                light: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
-                dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+                light: ['#e5e5e5', '#bdbdbd', '#8f8f8f', '#5f5f5f', '#111111'],
+                dark: ['#161616', '#404040', '#737373', '#a3a3a3', '#ffffff'],
               }}
             />
           </div>

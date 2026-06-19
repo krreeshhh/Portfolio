@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
 
-import SpotifyCard from '@/components/SpotifyCard'
 import CTA from '@/components/CTA'
 import GithubGraph from '@/components/GithubGraph'
 import Intro from '@/components/Intro'
@@ -14,7 +13,6 @@ const Home = () => {
   return (
     <div>
       <Intro />
-      <SpotifyCard />
       <GithubGraph />
       <Skills />
       <Projects />

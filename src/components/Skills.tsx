@@ -2,8 +2,11 @@
 
 import React from 'react'
 import { motion } from 'motion/react'
-import { IconBrandCss3, IconBrandFramerMotion, IconBrandHtml5, IconBrandJavascript, IconBrandNextjs, IconBrandNodejs, IconBrandReact, IconBrandTailwind, IconBrandTypescript } from '@tabler/icons-react'
-import { SiVite } from "react-icons/si";
+import { IconBrandJavascript, IconBrandNextjs, IconBrandReact, IconBrandTailwind, IconBrandTypescript } from "@tabler/icons-react"
+import { FaPython,FaCss3, FaHtml5, FaNodeJs   } from "react-icons/fa";
+import { VscTerminalPowershell } from "react-icons/vsc";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { SiVite , SiHyprland, SiTauri } from "react-icons/si";
 import { AnimationWrapper, childVariant } from './ui/animation-wrapper'
 
 type Skill = {
@@ -14,14 +17,16 @@ type Skill = {
 const skills: Skill[] = [
   { name: 'JavaScript', logo: <IconBrandJavascript /> },
   { name: 'TypeScript', logo: <IconBrandTypescript /> },
+    { name: 'Python', logo: <FaPython /> },
   { name: 'React', logo: <IconBrandReact /> },
   { name: 'Next.js', logo: <IconBrandNextjs /> },
-  { name: 'Node.js', logo: <IconBrandNodejs /> },
-  { name: 'HTML', logo: <IconBrandHtml5 /> },
-  { name: 'CSS', logo: <IconBrandCss3 /> },
+  { name: 'Node.js', logo: <FaNodeJs  /> },
+    { name: 'Vite.js', logo: <SiVite /> },
+  {name: 'Tauri', logo: <SiTauri />},
+  { name: 'HTML', logo: <FaHtml5 /> },
+  { name: 'CSS', logo: <FaCss3 /> },
   { name: 'Tailwind CSS', logo: <IconBrandTailwind /> },
-  { name: 'Framer Motion', logo: <IconBrandFramerMotion /> },
-  { name: 'Vite.js', logo: <SiVite /> }
+  {name: 'Shell', logo: <VscTerminalPowershell />},
 ]
 
 function Skills() {
@@ -30,7 +35,8 @@ function Skills() {
       className='px-4 md:px-8 pt-1 pb-8 -my-8'
       id='skills'
     >
-      <motion.h2 variants={childVariant} className='text-3xl md:text-4xl mt-8 mb-5 font-bold font-sans tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-600 dark:from-neutral-700 dark:to-white'>Skills</motion.h2>
+      <motion.h2 variants={childVariant} className='text-3xl md:text-4xl mt-8 mb-5 font-bold font-sans tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-600 dark:from-neutral-700 dark:to-white'>Toolkit
+      </motion.h2>
       <div className='flex flex-wrap gap-3'>
         {skills.map(skill => (
           <motion.div

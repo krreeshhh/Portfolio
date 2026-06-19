@@ -38,7 +38,7 @@ const Intro = () => {
             className='overflow-hidden w-max h-max rounded-xl shrink-0 border border-border shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]'
           >
             <Image
-              src={'/Main.webp'}
+              src={'/avatar.webp'}
               height={75}
               width={75}
               alt='Avatar'
@@ -50,7 +50,7 @@ const Intro = () => {
             <motion.h1 variants={childVariant} className='text-2xl md:text-3xl font-instrument-serif mt-1'>
               Krish
             </motion.h1>
-            <motion.p variants={childVariant} className='flex gap-1 items-center text-xs md:text-sm text-muted-foreground'>17 • <TextAnimation /></motion.p>
+            <motion.p variants={childVariant} className='flex gap-1 items-center text-xs md:text-sm text-muted-foreground'>18 • <TextAnimation /></motion.p>
           </div>
         </div>
         {/* Motion div below */}
@@ -74,7 +74,7 @@ const Intro = () => {
 const AboutMe = () => (
   <div className='text-muted-foreground text-sm my-4 flex flex-col gap-2'>
     <motion.p variants={childVariant}>
-      I'm just a dude who turns coke into code. I build dope stuff that doesn't end up in my GitHub graveyard—'cause the world's got enough abandoned side projects. My code slaps harder than my GPA ever did. I enjoy taking ideas from zero to one, iterating fast, and polishing the little details that make products feel premium. If it’s useful, reliable, and a bit over-engineered in the best way, I’m probably behind it.
+      Frontend, backend, cloud, automation - if it runs, I'll probably build it.
     </motion.p>
   </div>
 )

@@ -104,24 +104,24 @@ function Projects() {
             key={project.title}
             variants={childVariant}
             onClick={(e) => handleProjectCardClick(e, project)}
-            className="projects cursor-pointer"
+            className="projects h-full cursor-pointer"
           >
             <ProjectCard project={project} />
           </motion.div>
         ))}
       </div>
 
-      <Link href={'https://github.com/Tokittoo'} target='_blank'>
+      <Link href={'https://github.com/krreeshhh'} target='_blank'>
         <button className='flex items-center gap-1 text-sm mx-auto my-8 px-3 py-2 rounded-lg hover:bg-black hover:text-white dark:hover:bg-neutral-900 transition-colors duration-200 cursor-pointer'>
           See More <IconChevronDown size={16} />
         </button>
       </Link>
 
-      <motion.h2 variants={childVariant} className='text-3xl md:text-4xl my-10 font-bold font-sans tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-600 dark:from-neutral-700 dark:to-white'>Upcoming Projects</motion.h2>
+      <motion.h2 variants={childVariant} className='text-3xl md:text-4xl my-10 font-bold font-sans tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-600 dark:from-neutral-700 dark:to-white'>Under Construction</motion.h2>
       <div className='grid md:grid-cols-2 gap-4'>
         {upcomingProjects.map(upcomingProject => (
-          <div key={upcomingProject.title} className="projects">
-            <ProjectCard project={upcomingProject as any} />
+          <div key={upcomingProject.title} className="projects h-full">
+            <ProjectCard project={upcomingProject} />
           </div>
         ))}
       </div>

@@ -1,13 +1,13 @@
-import { IconBrandJavascript, IconBrandNextjs, IconBrandNodejs, IconBrandReact, IconBrandTailwind, IconBrandTypescript } from "@tabler/icons-react"
-import { FaCss3, FaHtml5 } from "react-icons/fa";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { SiVite } from "react-icons/si";
+import { IconBrandJavascript, IconBrandNextjs, IconBrandReact, IconBrandTailwind, IconBrandTypescript } from "@tabler/icons-react"
+import { FaPython,FaCss3, FaHtml5  } from "react-icons/fa";
+import { VscTerminalPowershell } from "react-icons/vsc";
+import { SiVite , SiHyprland, SiTauri } from "react-icons/si";
 
 export type Project = {
   title: string,
   description: string,
   image?: string,
-  liveLink: string,
+  liveLink?: string,
   sourceLink?: string,
   content: React.ReactNode,
   demoLink?: string,
@@ -38,6 +38,21 @@ const CSS = {
   logo: <FaCss3 size={18} />
 }
 
+const Python = {
+  name: 'Python',
+  logo: <FaPython size={18} />
+}
+
+const Tauri = {
+  name: 'Tauri',
+  logo: <SiTauri size={18} />
+}
+
+const Hyprland = {
+  name: 'Hyprland',
+  logo: <SiHyprland size={18} />
+}
+
 const NextJS = {
   name: 'Next.js',
   logo: <IconBrandNextjs size={18} />
@@ -46,6 +61,11 @@ const NextJS = {
 const React = {
   name: 'React',
   logo: <IconBrandReact size={18} />
+}
+
+const Terminal ={
+  name: 'Shell',
+  logo: <VscTerminalPowershell size={18} />
 }
 
 const Tailwind = {
@@ -59,19 +79,9 @@ const TypeScript = {
   logo: <IconBrandTypescript size={18} />
 }
 
-const NodeJS = {
-  name: 'NodeJS',
-  logo: <IconBrandNodejs size={18} />
-}
-
 const JavaScript = {
   name: 'JavaScript',
   logo: <IconBrandJavascript size={18} />
-}
-
-const Motionls = {
-  name: 'Framer Motion',
-  logo: <TbBrandFramerMotion size={18} />
 }
 
 const Vitejs = {
@@ -91,12 +101,6 @@ export const projects: Project[] = [
         <p>
           Legacy portfolio showcasing early career milestones and foundational security work.
         </p>
-        <ul>
-          <li>• Showcasing Hall of Fame recognitions from top tech companies</li>
-          <li>• Documenting early security research and vulnerability findings</li>
-          <li>• Clean, performance-focused design with HTML, CSS, JavaScript</li>
-          <li>• A foundational archive of professional growth and insights</li>
-        </ul>
       </>
     ),
     image: '/Projects/Sibhi.webp',
@@ -116,12 +120,6 @@ export const projects: Project[] = [
         <p>
           Modern, interactive portfolio highlighting advanced security research and detailed write-ups.
         </p>
-        <ul>
-          <li>• Features major discoveries including CVE-2025-26206</li>
-          <li>• Interactive ecosystem with Spotify integration and dynamic content</li>
-          <li>• Built with Next.js and TypeScript for optimal performance</li>
-          <li>• Comprehensive showcase of skills, certifications, and achievements</li>
-        </ul>
       </>
     ),
     image: '/Projects/Sibhi-v2.webp',
@@ -133,115 +131,57 @@ export const projects: Project[] = [
     ]
   },
   {
-    title: 'Penquin',
-    description: "Compact bug-bounty toolkit with pre-configured commands and optimized workflows to remove setup friction.",
-    liveLink: 'https://penquin.vercel.app',
-    sourceLink: 'https://github.com/xibhi/penquin',
-    content: (
+    title: 'zibi',
+    description: "Your clipboard's terminal slave. Copy. Pin. Share. Repeat.",
+    image: '/Projects/zibi.webp',
+    sourceLink: 'https://github.com/xibhi/zibi',
+    content:
       <>
         <p>
-          Compact bug-bounty toolkit with pre-configured commands and optimized workflows.
-        </p>
-        <ul>
-          <li>• Zero-friction bug hunting with pre-wired workflows</li>
-          <li>• Recon to exploitation, fully streamlined</li>
-          <li>• Curated tools that cut noise and setup pain</li>
-          <li>• Built for speed, focus, and repeatability</li>
-        </ul>
-      </>
-    ),
-    demoLink: 'https://res.cloudinary.com/dqsz8xitb/video/upload/v1766556638/Penquin_bgqgwy.mp4',
+          zibi is a cute clipboard manager that lives entirely in your terminal. Copy, pin, share, transform and revisit clipboard history without leaving the command line — all without touching a mouse or opening a browser.
+          </p>
+      </>,
+    demoLink: "",
     tags: [
-      React,
-      NextJS,
-      NodeJS,
-      TypeScript,
-      Tailwind,
-      Motionls,
-    ]
-  },
-  {
-    title: 'Drago',
-    description: "A marketplace for real tech products created by practitioners and engineers who work with technology every day.",
-    liveLink: 'https://dragotool.shop',
-    content: (
-      <>
-        <p>
-          Specialized marketplace delivering battle-tested tools for security practitioners.
-        </p>
-        <ul>
-          <li>• Curated library of essential cybersecurity tools and checklists</li>
-          <li>• Solves real-world security challenges for developers and pros</li>
-          <li>• Streamlined marketplace experience for digital security assets</li>
-          <li>• Built for reliability and practical, everyday security use</li>
-        </ul>
-      </>
-    ),
-    image: '/Projects/Drago.webp',
-    tags: [
-      React,
-      Vitejs,
-      NodeJS,
-      TypeScript,
-      Tailwind,
-    ]
-  },
-  {
-    title: 'Wattrack',
-    description: "A Secure Login portal providing Authorized access to a monitoring dashboard for tracking system data and activity",
-    liveLink: 'https://wattrack.vercel.app',
-    content: (
-      <>
-        <p>
-          Enterprise secure access portal for real-time system monitoring and compliance.
-        </p>
-        <ul>
-          <li>• Robust authentication ensuring authorized-only system access</li>
-          <li>• Real-time dashboard for critical data and activity tracking</li>
-          <li>• Comprehensive logging for full security and compliance audits</li>
-          <li>• Scalable architecture designed for enterprise monitoring needs</li>
-        </ul>
-      </>
-    ),
-    image: '/Projects/Wattrack.webp',
-    tags: [
-      React,
-      NextJS,
-      NodeJS,
-      TypeScript,
-      Tailwind,
+      Python,
+      Terminal,
+
     ]
   },
   {
     title: 'PigOS',
-    description: "A Secure Login portal providing Authorized access to a monitoring dashboard for tracking system data and activity",
+    description: "An opinionated Hyprland desktop environment for Arch Linux. Built for Humans, Approved by Pigs.",
     liveLink: 'https://pigos.vercel.app',
+    sourceLink: 'https://github.com/xibhi/pigos',
     content: (
       <>
         <p>
-          Enterprise secure access portal for real-time system monitoring and compliance.
+          A Hyprland setup for Arch Linux that gets you running without having to figure everything out from scratch. Built to understand the stack. Shared because it works.
         </p>
-        <ul>
-          <li>• Robust authentication ensuring authorized-only system access</li>
-          <li>• Real-time dashboard for critical data and activity tracking</li>
-          <li>• Comprehensive logging for full security and compliance audits</li>
-          <li>• Scalable architecture designed for enterprise monitoring needs</li>
-        </ul>
       </>
     ),
     image: '/Projects/pigos.webp',
     tags: [
-      React,
-      NextJS,
-      NodeJS,
-      TypeScript,
-      Tailwind,
+      Terminal,
+      CSS,
+            Hyprland,
     ]
   }
 
 ]
 
 export const upcomingProjects: UpcomingProject[] = [
+  {
+    title: 'Argus',
+    description: "An tool that aggregates and analyzes data from multiple sources to provide comprehensive intelligence reports.",
+    image: '/Projects/Fellowship.webp',
+    tags: [
+      React,
+      TypeScript,
+      Tailwind,
+      Tauri,
+    ]
+  },
   {
     title: 'Fellowship',
     description: "A Community where Hackers and Bug Bounty Hunters connect, collaborate, and grow together.",
@@ -251,6 +191,7 @@ export const upcomingProjects: UpcomingProject[] = [
       TypeScript,
       Tailwind,
     ]
-  }
+  },
+
 
 ]

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { type Project } from '@/data/projects'
+import { type Project, type UpcomingProject } from '@/data/projects'
 import Link from 'next/link'
 import { Button } from './ui/button'
 import Image from 'next/image'
@@ -11,7 +11,7 @@ import { motion } from 'motion/react'
 import { Video } from './ui/video'
 import Card from './Card'
 
-export const ProjectCard = ({ project }: { project: Project }) => {
+export const ProjectCard = ({ project }: { project: Project | UpcomingProject }) => {
     return (
         <Card project={project} />
     )
@@ -56,7 +56,7 @@ export const ProjectPopup = ({ project, ref }: { project: Project, ref: React.Re
                         {project.content}
                     </motion.div>
                 </div>
-                <motion.div className={`grid ${project.sourceLink ? 'grid-cols-2' : 'grid-cols-1'} gap-2 h-max mt-4`}>
+                <motion.div className={`grid ${project.sourceLink && project.liveLink ? 'grid-cols-2' : 'grid-cols-1'} gap-2 h-max mt-4`}>
                     {project.sourceLink && (
                         <Button variant={"secondary"} asChild className='group/button hover:bg-white hover:text-black rounded-lg'>
                             <Link href={project.sourceLink} target='_blank'>
@@ -65,12 +65,14 @@ export const ProjectPopup = ({ project, ref }: { project: Project, ref: React.Re
                             </Link>
                         </Button>
                     )}
-                    <Button asChild className='group/button hover:bg-white hover:text-black rounded-lg'>
-                        <Link href={project.liveLink} target='_blank'>
-                            <IconExternalLink size={16} className='group-hover/button:-rotate-12 rotate-0 group-hover/button:-translate-[2px] transition-transform duration-300' />
-                            Live
-                        </Link>
-                    </Button>
+                    {project.liveLink && (
+                        <Button asChild className='group/button hover:bg-white hover:text-black rounded-lg'>
+                            <Link href={project.liveLink} target='_blank'>
+                                <IconExternalLink size={16} className='group-hover/button:-rotate-12 rotate-0 group-hover/button:-translate-[2px] transition-transform duration-300' />
+                                Live
+                            </Link>
+                        </Button>
+                    )}
                 </motion.div>
             </div>
         </motion.div>
