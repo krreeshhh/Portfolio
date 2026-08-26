@@ -35,7 +35,10 @@ const Intro = () => {
         <div className='flex gap-3 md:gap-4'>
           <motion.div
             variants={childVariant}
-            className='overflow-hidden w-max h-max rounded-xl shrink-0 border border-border shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]'
+            whileHover={{ scale: 1.06, rotate: 2 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 350, damping: 18 }}
+            className='overflow-hidden w-max h-max rounded-2xl shrink-0 border border-border shadow-[0_1px_2px_rgba(0,0,0,0.02),0_4px_12px_rgba(0,0,0,0.02)] cursor-pointer'
           >
             <Image
               src={'/avatar.webp'}
@@ -46,11 +49,16 @@ const Intro = () => {
               priority={true}
             />
           </motion.div>
-          <div>
-            <motion.h1 variants={childVariant} className='text-2xl md:text-3xl font-instrument-serif mt-1'>
+          <div className="flex flex-col justify-center">
+            <motion.h1 
+              variants={childVariant} 
+              className='text-3xl md:text-[48px] font-sans font-semibold tracking-tight leading-[52.0077px] text-neutral-900 dark:text-neutral-100'
+            >
               Krish
             </motion.h1>
-            <motion.p variants={childVariant} className='flex gap-1 items-center text-xs md:text-sm text-muted-foreground'>18 • <TextAnimation /></motion.p>
+            <motion.p variants={childVariant} className='flex gap-1.5 items-center text-xs md:text-sm text-neutral-500 dark:text-neutral-400 mt-1 font-normal'>
+              18 • <TextAnimation />
+            </motion.p>
           </div>
         </div>
         {/* Motion div below */}
@@ -74,7 +82,7 @@ const Intro = () => {
 const AboutMe = () => (
   <div className='text-muted-foreground text-sm my-4 flex flex-col gap-2'>
     <motion.p variants={childVariant}>
-      Frontend, backend, cloud, automation - if it runs, I'll probably build it.
+      Frontend, backend, cloud, automation - if it runs, I&apos;ll probably build it.
     </motion.p>
   </div>
 )

@@ -6,20 +6,17 @@ import { motion, MotionProps, Variants } from 'motion/react'
 export const childVariant: Variants = {
   initial: {
     opacity: 0,
-    y: 10,
-    filter: 'blur(8px)',
-    transition: {
-      type: 'tween',
-      duration: 0.4
-    }
+    y: 12,
+    filter: 'blur(10px)',
   },
   animate: {
     opacity: 1,
     y: 0,
     filter: 'blur(0px)',
     transition: {
-      type: 'tween',
-      duration: 0.4,
+      type: 'spring',
+      bounce: 0,
+      duration: 0.45,
     }
   }
 }
@@ -28,8 +25,8 @@ export const parentVariant: Variants = {
   initial: {},
   animate: {
     transition: {
-      duration: 0.4,
-      staggerChildren: 0.05
+      staggerChildren: 0.06,
+      delayChildren: 0.05,
     }
   }
 }

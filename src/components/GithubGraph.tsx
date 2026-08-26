@@ -55,10 +55,16 @@ async function getGithubContributions() {
     if (!response.ok) return null;
 
     const json = await response.json();
-    const weeks = json.data.user.contributionsCollection.contributionCalendar.weeks;
-    const days = weeks.flatMap((week: any) => week.contributionDays);
+    type GraphQLWeek = {
+      contributionDays: {
+        date: string;
+        contributionCount: number;
+      }[];
+    };
+    const weeks = json.data.user.contributionsCollection.contributionCalendar.weeks as GraphQLWeek[];
+    const days = weeks.flatMap((week) => week.contributionDays);
 
-    const formatted: ContributionDay[] = days.map((day: any) => ({
+    const formatted: ContributionDay[] = days.map((day) => ({
       date: day.date,
       count: day.contributionCount,
       level: getLevel(day.contributionCount),

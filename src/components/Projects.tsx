@@ -27,21 +27,18 @@ function Projects() {
 
   const childVariant = {
     hidden: {
-      opacity: 0.5,
-      y: 50,
-      filter: 'blur(10px)',
-      transition: {
-        type: 'tween',
-        duration: 0.3
-      }
+      opacity: 0,
+      y: 20,
+      filter: 'blur(8px)',
     },
     show: {
       opacity: 1,
       y: 0,
       filter: 'blur(0px)',
       transition: {
-        type: 'tween',
-        duration: 0.3
+        type: 'spring',
+        bounce: 0,
+        duration: 0.4
       }
     }
   }
@@ -50,9 +47,8 @@ function Projects() {
     hidden: {},
     show: {
       transition: {
-        duration: 0.3,
-        staggerChildren: 0.1,
-        delayChildren: 0.1
+        staggerChildren: 0.08,
+        delayChildren: 0.05
       }
     }
   }
@@ -69,26 +65,35 @@ function Projects() {
           <motion.div
             initial={{
               backdropFilter: "blur(0px)",
-              opacity: 0,
+              backgroundColor: "rgba(0, 0, 0, 0)",
             }}
             animate={{
-              backdropFilter: "blur(10px)",
-              opacity: 1,
+              backdropFilter: "blur(12px)",
+              backgroundColor: "rgba(0, 0, 0, 0.4)",
             }}
             exit={{
               backdropFilter: "blur(0px)",
-              opacity: 0,
+              backgroundColor: "rgba(0, 0, 0, 0)",
             }}
-            transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-            className='fixed inset-0 bg-background/50 flex justify-center items-center z-[100] px-4'
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className='fixed inset-0 flex justify-center items-center z-[100] px-4'
             onClick={() => setCurrent(null)}
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              drag="y"
+              dragConstraints={{ top: 0, bottom: 250 }}
+              dragElastic={{ top: 0, bottom: 0.5 }}
+              onDragEnd={(event, info) => {
+                if (info.offset.y > 140 || info.velocity.y > 350) {
+                  setCurrent(null);
+                }
+              }}
+              initial={{ opacity: 0, scale: 0.96, y: 80 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
+              exit={{ opacity: 0, scale: 0.96, y: 100 }}
+              transition={{ type: 'spring', stiffness: 280, damping: 26 }}
               onClick={(e) => e.stopPropagation()}
+              className="cursor-grab active:cursor-grabbing w-full max-w-[32rem] relative z-50 origin-bottom"
             >
               <ProjectPopup ref={ref} project={current} />
             </motion.div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 import Navigation from "@/components/Navigation";
@@ -15,6 +15,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -96,7 +102,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-200 relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased transition-colors duration-200 relative`}
       >
         <Script id="ld-json-person" type="application/ld+json" strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -129,14 +135,21 @@ export default function RootLayout({
           }}
         />
         <ThemeContextProvider>
-          <div className='backdrop-blur-md sticky top-0 transition-colors duration-200 z-50'>
-            <div className='flex justify-between items-center max-w-4xl mx-auto'>
+          <div className='sticky top-0 z-50 w-full pt-4 px-4 md:px-8 transition-colors duration-300 pointer-events-none'>
+            <div className='flex justify-between items-center max-w-3xl mx-auto px-2 md:px-4 h-14 border border-neutral-200/25 dark:border-neutral-800/40 bg-neutral-100/60 dark:bg-black/60 backdrop-blur-xl rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.02)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.25)] pointer-events-auto'>
               <DarkModeToggle />
               <Navigation />
             </div>
           </div>
-          <div className='max-w-2xl mx-auto'>
+          <div className='max-w-3xl mx-auto px-4 md:px-8 py-10 relative z-10'>
             {children}
+          </div>
+          
+          {/* Ambient background glow orbs */}
+          <div className='fixed inset-0 -z-0 overflow-hidden pointer-events-none'>
+            <div className='absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-indigo-500/10 to-teal-500/10 blur-[130px] dark:from-indigo-950/15 dark:to-teal-950/15 transition-colors duration-300' />
+            <div className='absolute top-[40%] -right-[10%] w-[60%] h-[60%] rounded-full bg-gradient-to-br from-purple-500/10 to-pink-500/10 blur-[130px] dark:from-purple-950/15 dark:to-pink-950/15 transition-colors duration-300' />
+            <div className='absolute bottom-[-10%] left-[20%] w-[45%] h-[45%] rounded-full bg-gradient-to-br from-blue-500/5 to-cyan-500/5 blur-[120px] dark:from-blue-950/10 dark:to-cyan-950/10 transition-colors duration-300' />
           </div>
           
         </ThemeContextProvider>

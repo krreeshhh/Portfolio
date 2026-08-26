@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 
-const roles = ["Developer", "Programmer", "Tech Enthusiast", "System Engineer" ];
+const roles = ["Developer", "Programmer", "Tech Enthusiast"];
 const switchInterval = 2000;
 
 const TextAnimation = () => {

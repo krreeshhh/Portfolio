@@ -1,7 +1,7 @@
 import { IconBrandJavascript, IconBrandNextjs, IconBrandReact, IconBrandTailwind, IconBrandTypescript } from "@tabler/icons-react"
 import { FaPython,FaCss3, FaHtml5  } from "react-icons/fa";
 import { VscTerminalPowershell } from "react-icons/vsc";
-import { SiVite , SiHyprland, SiTauri } from "react-icons/si";
+import { SiHyprland, SiTauri } from "react-icons/si";
 
 export type Project = {
   title: string,
@@ -84,52 +84,8 @@ const JavaScript = {
   logo: <IconBrandJavascript size={18} />
 }
 
-const Vitejs = {
-  name: 'Vite.js',
-  logo: <SiVite size={18} />
-}
-
 
 export const projects: Project[] = [
-  {
-    title: 'Sibhi v1.0',
-    description: "Personal cybersecurity portfolio showcasing Write-ups, Skills, Experience, and Professional Insights.",
-    liveLink: 'https://xibhi.netlify.app',
-    sourceLink: 'https://github.com/xibhi/xibhi.github.io',
-    content: (
-      <>
-        <p>
-          Legacy portfolio showcasing early career milestones and foundational security work.
-        </p>
-      </>
-    ),
-    image: '/Projects/Sibhi.webp',
-    tags: [
-      Html,
-      CSS,
-      JavaScript,
-    ]
-  },
-  {
-    title: 'Sibhi v2.0',
-    description: "Redesigned Professional cybersecurity portfolio with structured Write-ups, Skills, Experience, and Achievements.",
-    liveLink: 'https://xibhi.vercel.app',
-    sourceLink: 'https://github.com/xibhi/portfolio',
-    content: (
-      <>
-        <p>
-          Modern, interactive portfolio highlighting advanced security research and detailed write-ups.
-        </p>
-      </>
-    ),
-    image: '/Projects/Sibhi-v2.webp',
-    tags: [
-      React,
-      TypeScript,
-      Tailwind,
-      NextJS,
-    ]
-  },
   {
     title: 'zibi',
     description: "Your clipboard's terminal slave. Copy. Pin. Share. Repeat.",
@@ -151,7 +107,6 @@ export const projects: Project[] = [
   {
     title: 'PigOS',
     description: "An opinionated Hyprland desktop environment for Arch Linux. Built for Humans, Approved by Pigs.",
-    liveLink: 'https://pigos.vercel.app',
     sourceLink: 'https://github.com/xibhi/pigos',
     content: (
       <>

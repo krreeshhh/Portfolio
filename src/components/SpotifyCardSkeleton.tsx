@@ -8,7 +8,7 @@ export default function SpotifyCardSkeleton() {
             initial={{ opacity: 0, y: 10, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ type: 'tween', duration: 0.4, delay: 0.25 }}
-            className="w-[620px] mx-auto bg-card text-card-foreground border border-border rounded-2xl p-2 flex items-center justify-between gap-2"
+            className="w-full bg-card text-card-foreground border border-border rounded-2xl p-2 flex items-center justify-between gap-2"
         >
             <div className="flex justify-center items-center gap-4">
                 {/* Album art skeleton */}
