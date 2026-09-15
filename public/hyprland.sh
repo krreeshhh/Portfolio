@@ -4,16 +4,8 @@
 set -e
 
 echo "Starting installation of Hyprland and related applications..."
-
-echo "Configuring pacman mirrors for India..."
-sudo pacman -Sy --noconfirm reflector
-sudo reflector --country India --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
-
 # Force database refresh
 sudo pacman -Syy
-
-echo "Updating system..."
-sudo pacman -Syu --noconfirm
 
 echo "Installing Hyprland and desktop portal..."
 sudo pacman -S --noconfirm hyprland xdg-desktop-portal-hyprland
